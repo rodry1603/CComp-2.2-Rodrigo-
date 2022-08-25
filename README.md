@@ -2,3 +2,5 @@
 Rodrigo Gomez San Roman 
 
 Ciencia de la computacion
+
+Este es mi repositorio
