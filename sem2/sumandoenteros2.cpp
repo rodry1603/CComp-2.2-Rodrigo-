@@ -3,13 +3,15 @@
 using namespace std;
 
 int main()
- {
-
+{
+    //declaro 2 variables de tipo entero
     int a;
-    a=20;
-
     int b;
-    b=10;
+
+   cout << "Ingrese el primer numero";
+   cin >> a;
+   cout << "Ingrese el segundo numero";
+   cin >> b;
 
     int suma = a + b;
 
