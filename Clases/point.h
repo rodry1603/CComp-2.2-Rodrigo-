@@ -3,6 +3,7 @@
 
 #include <iostream>
 
+
 class Point {
     public:
         Point(int _x = 0, int _y = 0) : x(_x), y(_y) {
@@ -30,6 +31,11 @@ class Point {
         }
     private:
         int x, y;
+        friend std::ostream& operator<<(std::ostream &output,const Point &p);
 };
 
+std::ostream& operator<<(std::ostream &output, const Point &p){
+    output << p.x <<", "<< p.y;
+    return output;
+}
 #endif
