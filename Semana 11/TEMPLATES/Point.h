@@ -1,7 +1,7 @@
-#ifndef__POINT_H__
-#define__POINT_H__
+#ifndef __POINT_H__
+#define __POINT_H__
 
-template<typrname T>
+template<typename T>
 class Point{
     private:
     T x,y;
@@ -23,3 +23,5 @@ template <typename T>
 T Point<T>::getY() const{
     return y;
 }
+
+#endif
