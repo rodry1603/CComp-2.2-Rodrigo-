@@ -1,23 +1,22 @@
-#ifndef __DYNAMICINTARRAY_H__
-#define __DYNAMICINTARRAY_H__
+#ifndef __INTEGERARRAY_H__
+#define __INTEGERARRAY_H__
 
+#include <iostream>
 
 class DynamicIntArray {
-        int size;
+    private:
         int *data;
+        int size;
+
     public:
         DynamicIntArray();
-        DynamicIntArray(const int arr[], int size);
+        DynamicIntArray(const int arr[], const int tam);
         DynamicIntArray(const DynamicIntArray &o);
-
+        ~DynamicIntArray();
+        
         int getSize() const;
         void print() const;
-
-        void push_back(int elem);
-        void insert(int elem, int pos);
-        void remove(int pos);
-
-        ~DynamicIntArray();
+        void push_back(int val);
 };
 
 #endif
