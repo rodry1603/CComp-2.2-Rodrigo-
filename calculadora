@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+
+int reducir_mod(int a, int b){
+	return a % b;
+}
+
+int suma_mod(int a, int b) {
+	if (a > b) {
+		a = reducir_mod(a, b);
+	}
+	int out = (a + b) % 25;
+	return out;
+}
+
+int resta_mod(int a, int b){}
