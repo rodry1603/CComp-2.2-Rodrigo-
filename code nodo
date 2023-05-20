@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+/*
+struct nodo {
+	int valor;
+	nodo* next;
+	nodo(int U, nodo* n = nullptr) {
+		valor = U;
+		next = n;
+	}
+};
+*/
+
+template<class T>
+struct nodo {
+	T valor;
+	nodo<T>* next;
+	nodo(T U, nodo<T>* n = nullptr) {
+		valor = U;
+		next = n;
+
+	}
+};
+
+
+template<class T>
+struct pila {
+	nodo<T>* top = NULL;
+	void push(T V);
+	bool pop(T& V);
+};
+
+template<class T>
+void pila<T>::push(T V){
+	top = new nodo<T>(V, top);
+}
+
+template<class T>
+bool pila<T>::pop(T&V){
+	bool res = false;
+	if (top) {
+		V = top->valor;
+		nodo<T>* tmp = top;
+		top = top->next;
+		delete tmp;
+		res = true;
+	}
+	return res;
+}
+
+int main() {
+	pila<int> p;
+	p.push(1);
+	p.push(2);
+	p.push(3);
+	bool cont = true;
+	int x;
+	while (cont) {
+		cont = p.pop(x);
+		cout << x << endl;
+	}
+}
